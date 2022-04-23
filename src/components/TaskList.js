@@ -1,28 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 
-import TaskItem from './TaskItem';
+import TaskItem from "./TaskItem";
+import AddTask from "./AddTask";
 
-class TaskList extends React.Component {
+const TaskList = (props) => {
+  const [taskItems, setTaskItems] = useState([]);
 
-  markDone = (task) => {
-    const taskIndex = this.props.tasks.findIndex(t => t.id === task.id);
-    let taskList = this.props.tasks;
-    taskList.splice(taskIndex, 1);
-    console.log(this.props);
-    this.props.onUpdateTaskList(taskList);
-  }
+  useEffect(() => {
+    setTaskItems(props.tasks);
+  }, [props.tasks, taskItems]);
 
-  render() {
-    const taskItems = this.props.tasks.map(task => {
-      return <TaskItem task={task} key={task.id} markDone={this.markDone} />
-    });
+  const markDone = (task) => {
+    const taskIndex = taskItems.findIndex((t) => t.id === task.id);
+    let taskList = taskItems;
+    taskItems.splice(taskIndex, 1);
+    console.log(props);
+    props.onUpdateTaskList(taskList);
+    setTaskItems([...taskList]);
+  };
 
-    return (
+  return (
+    <>
+    <h1>List-View</h1>
       <ul className="task-list list-group">
-        { taskItems }
+        <div className="task-titles">
+        <p>Title</p>
+        <p>Status</p>
+        <p>Type</p>
+        <p></p>
+        </div>
+        {taskItems.map((task) => (
+          <TaskItem task={task} key={task.id} markDone={markDone} />
+        ))}
       </ul>
-    )
-  }
-}
+    </>
+  );
+};
 
 export default TaskList;

@@ -1,0 +1,117 @@
+.list-group-item,.task-titles{
+display: flex;
+width: 100%;
+flex-direction: row;
+justify-content: space-around;
+}
+.container{
+    padding-top: 70px;
+}
+.container2{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0 0 0 0 ;
+    margin: 0%;
+    
+}
+.row{
+    display: flex;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.forward{
+    max-width: 50%;
+}
+.container{
+    margin: auto;
+    justify-content: center;
+    max-width: 90%;
+    width: 100%;
+}
+.btn-cont{
+    margin: 5px 0px;
+}
+
+.card {
+    margin: 20px 5px;
+}
+
+.back{
+    margin: 10px auto;
+}
+
+.forward{
+    margin: 10px auto;
+}
+
+.col-cont:nth-child(even) {
+    background-color: rgb(200, 250, 255);
+  }
+  .col-cont:nth-child(odd) {
+    background-color: rgb(230, 248, 255);
+  }
+
+
+.task-input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+#task-progress{
+    width: 30%;
+    margin: auto;
+}
+.formButton{
+    width: 30%;
+    margin: auto;
+}
+@media only screen and (max-width: 989px){
+
+    .row{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .col-3{
+        flex-direction: row;
+        max-width: none;
+        flex: 0 0 50%;
+        justify-content: space-around;
+    }
+}
+@media only screen and (max-width: 800px){
+    .row{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .col-3{
+        flex-direction: row;
+        flex: 0 0 50%;
+        justify-content: space-around;
+    }
+}
+@media only screen and (max-width: 650px){
+    .row{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .col-3{
+        flex: 0 0 50%;
+
+    }
+}
+
+@media only screen and (max-width: 470px){
+    .row{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .col-3{
+        flex: 0 0 100%;
+
+    }
+}
