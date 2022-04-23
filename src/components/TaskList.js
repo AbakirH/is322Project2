@@ -1,7 +1,6 @@
 import React, { useState, useEffect,useRef } from "react";
 
 import TaskItem from "./TaskItem";
-import AddTask from "./AddTask";
 
 const TaskList = (props) => {
   const [taskItems, setTaskItems] = useState([]);

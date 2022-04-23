@@ -11,7 +11,7 @@ const GridItem = (props) => {
         </h6>
         <div className="btn-cont">
           <div className="back">
-            {props.previous != "" ? (
+            {props.previous !== "" ? (
               <button
                 className="btn btn-primary"
                 onClick={() => props.moveBackItemFromGrid(props.task)}
@@ -23,7 +23,7 @@ const GridItem = (props) => {
             )}
           </div>
           <div className="forward">
-            {props.forward != "" ? (
+            {props.forward !== "" ? (
               <button
                 className="btn btn-primary"
                 onClick={() => props.moveItemFromGrid(props.task)}
