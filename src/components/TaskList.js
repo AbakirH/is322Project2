@@ -5,10 +5,6 @@ import TaskItem from "./TaskItem";
 const TaskList = (props) => {
   const [taskItems, setTaskItems] = useState([]);
   const [filteredTodos, setFilteredTodos] = useState( [...taskItems ])
-	const nameRef = useRef(null);
-	const statusRef = useRef(null);
-	const typeRef = useRef(null)
-
   useEffect(() => {
     setTaskItems(props.tasks);
     setFilteredTodos(props.tasks);
@@ -32,7 +28,6 @@ const TaskList = (props) => {
 		} else if(value === "desc"){
       setFilteredTodos(temp.sort((a, b) => (a.title > b.title ? -1 : 1)))
 		}
-	
 	}
   const filteredByStatus=(e)=>{
 		const status = e.currentTarget.value;
@@ -59,19 +54,19 @@ const TaskList = (props) => {
     <h1>List-View</h1>
       <ul className="task-list list-group">
       <div className="task-titles">
-					<select className="bg-slate-800 p-2" id="filterByName" onChange={(e) => filterByName(e)} ref={nameRef}>
+					<select className="bg-slate-800 p-2" id="filterByName" onChange={(e) => filterByName(e)} >
             <option value="default">Sort by Title</option>
 						<option value="asc">Name: A - Z</option>
 						<option value="desc">Name: Z - A</option>
 					</select>
-          <select className="bg-slate-800 p-2" id="filterByStatus" onChange={(e) => filteredByStatus(e)} ref={statusRef}>
+          <select className="bg-slate-800 p-2" id="filterByStatus" onChange={(e) => filteredByStatus(e)}>
             <option value="default">Sort by Status</option>
 						<option value="todo">Todo</option>
 						<option value="in-progress">In Progress</option>
 						<option value="review">Review</option>
 						<option value="done">Done</option>
 					</select>
-          <select className="bg-slate-800 p-2" id="filterByStatus" onChange={(e) => filterByType(e)} ref={typeRef}>
+          <select className="bg-slate-800 p-2" id="filterByStatus" onChange={(e) => filterByType(e)} >
             <option value="default">Sort by Type</option>
 						<option value="feature">Feature</option>
 						<option value="bug">Bug</option>
