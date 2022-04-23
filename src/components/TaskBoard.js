@@ -47,7 +47,6 @@ const TaskBoard = (props) => {
     <>
       <h3>Task Board</h3>
       <div className="container2 grid-view-cont">
-        <hr className="hr" />
         <div className="row gridView">
           <div className="col-3 col-cont todo">
             <h3>To-Do</h3>

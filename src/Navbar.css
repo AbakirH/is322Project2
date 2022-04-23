@@ -3,7 +3,7 @@
   flex-direction: row;
   position: fixed;
   height: 50px;
-  z-index: 0;
+  z-index: 1;
   width: 100%;
   background-color: #5597b4;
   box-shadow: 0 1px 1px #ccc;
@@ -59,7 +59,6 @@ nav.contact .Contact {
   background-color: #008CBA;
   border: none;
   color: white;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -81,5 +80,11 @@ nav.contact .Contact {
 @media only screen and (max-width: 450px){
   #navTitle{
     font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 370px){
+  #navTitle{
+    font-size: 20px;
   }
 }
