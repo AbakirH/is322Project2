@@ -21,13 +21,13 @@ const Navbar = () => {
         <h1 id="navTitle">Task Manager</h1>
       </div>
       <div id="second">
-        <button onClick={goTaskBoard} type="submit">
+        <button className="navbarButton" onClick={goTaskBoard} type="submit">
           TaskBoard
         </button>
-        <button onClick={goTaskList} type="submit">
+        <button className="navbarButton" onClick={goTaskList} type="submit">
           TaskList
         </button>
-        <button onClick={goAddTask} type="submit">
+        <button className="navbarButton" onClick={goAddTask} type="submit">
           Add Task
         </button>
       </div>

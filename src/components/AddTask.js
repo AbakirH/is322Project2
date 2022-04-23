@@ -15,6 +15,7 @@ const AddTask = (props) => {
       ...newTask,
       [e.target.name]: e.target.value,
       "column":"todo",
+      "type":"feature"
     });
   };
 
@@ -35,12 +36,17 @@ const AddTask = (props) => {
         name="newTask"
         onChange={onChange}
       />
-       <select onChange={handleSelect} name="column" id="task-progress">
+       <select onChange={handleSelect} name="column" className="task-progress">
         <option value="todo">todo</option>
         <option value="in-progress">In-Progress</option>
         <option value="review">Review</option>
         <option value="done">Done</option>
       </select>
+      <select className="task-progress">
+						<option value="feature">Feature</option>
+						<option value="bug">Bug</option>
+						<option value="task">Task</option>
+				</select>
       <input className="formButton" type="submit" value="Submit"/>
     </form>
   );

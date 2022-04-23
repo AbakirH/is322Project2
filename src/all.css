@@ -62,7 +62,7 @@ justify-content: space-around;
     width: 100%;
     justify-content: center;
 }
-#task-progress{
+.task-progress{
     width: 30%;
     margin: auto;
 }
@@ -84,6 +84,10 @@ justify-content: space-around;
     }
 }
 @media only screen and (max-width: 800px){
+    .task-progress{
+        width: 50%;
+        margin: auto;
+    }
     .row{
         flex-direction: row;
         justify-content: space-around;
@@ -95,6 +99,10 @@ justify-content: space-around;
     }
 }
 @media only screen and (max-width: 650px){
+    .task-progress{
+        width: 70%;
+        margin: auto;
+    }
     .row{
         flex-direction: row;
         justify-content: space-around;

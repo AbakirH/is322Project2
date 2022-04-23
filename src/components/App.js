@@ -36,7 +36,7 @@ const App = () => {
     tasksList.push({
       title: taskName.newTask,
       id: tasks.length + 1,
-      type: "task",
+      type: taskName.type,
       column: taskName.column,
     });
     setTasks([...tasksList]);
